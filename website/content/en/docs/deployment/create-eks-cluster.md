@@ -35,6 +35,10 @@ eksctl create cluster \
 --with-oidc
 ```
 
+{{% alert title="Note" color="info" %}}
+Kubeflow only supports x86-based EC2 worker nodes at this time. Efforts are underway to make Kubeflow run on AWS Graviton instances.
+{{% /alert %}}
+
 If you are using an existing EKS cluster, create an [OIDC provider](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html) and associate it with for your EKS cluster with the following command:
 ```bash
 eksctl utils associate-iam-oidc-provider --cluster ${CLUSTER_NAME} \
